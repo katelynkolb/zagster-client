@@ -15,4 +15,8 @@ function updateRideCount(data){
     $("h2#3rideCount").html(numberOfRides)
 }
 
+function printdata(data){
+   console.log(data);
+
+}
 
