@@ -7,6 +7,7 @@ $(updateView)
 function updateView()  {
      $.getJSON(BASE_URL + "/rides/count" , updateRideCount)
      $.getJSON(BASE_URL + "/rides/count/g5", updateG5Count)
+     $.getJSON(BASE_URL + "/rides/count/columbia_simpson", updatecolumbia_simpsonCount)
 }
 
 function updateRideCount(data) {
@@ -17,6 +18,11 @@ function updateRideCount(data) {
 function updateG5Count(data)  {
     numberOfRides = data.count
     $("p#G5").html(numberOfRides)
+}
+
+function updatecolumbia_simpsonCount(data)  {
+    numberOfRides = data.count
+    $("p#Columbia_Simpson").html(numberOfRides)
 }
 
 // function printdata(data){
