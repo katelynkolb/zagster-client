@@ -9,6 +9,8 @@ function updateView()  {
      $.getJSON(BASE_URL + "/rides/count/g5", updateG5Count)
      $.getJSON(BASE_URL + "/rides/count/columbia_simpson", updatecolumbia_simpsonCount)
      $.getJSON(BASE_URL + "/rides/count/drake_park", updatedrake_parkCount)
+     $.getJSON(BASE_URL + "/rides/count/galveston", updategalvestonCount)
+     $.getJSON(BASE_URL + "/rides/count/grc", updategrcCount)
 }
 
 function updateRideCount(data) {
@@ -29,6 +31,17 @@ function updatecolumbia_simpsonCount(data)  {
 function updatedrake_parkCount(data)  {
     numberOfRides = data.count
     $("p#drake_park").html(numberOfRides)
+
+}
+
+function updategalvestonCount(data)  {
+    numberOfRides = data.count
+    $("p#galveston").html(numberOfRides)
+}
+
+function updategrcCount(data)  {
+    numberOfRides = data.count
+    $("p#grc").html(numberOfRides)
 }
 
 // function printdata(data){
