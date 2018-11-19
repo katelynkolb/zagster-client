@@ -12,6 +12,7 @@ function updateView()  {
      $.getJSON(BASE_URL + "/rides/count/galveston", updategalvestonCount)
      $.getJSON(BASE_URL + "/rides/count/grc", updategrcCount)
      $.getJSON(BASE_URL + "/rides/count/old_mill", updateold_millCount)
+     $.getJSON(BASE_URL + "/rides/count/osu_cascades", updateosu_cascadesCount)
 }
 
 function updateRideCount(data) {
@@ -49,6 +50,12 @@ function updateold_millCount(data) {
     numberOfRides = data.count
     $("p#old_mill").html(numberOfRides)
 }
+
+function updateosu_cascadesCount(data)  {
+    numberOfRides = data.count
+    $("p#osu_cascades").html(numberOfRides)
+}
+
 
 // function printdata(data){
 //    console.log(data);
